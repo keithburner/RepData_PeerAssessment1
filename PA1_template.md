@@ -1,8 +1,9 @@
 ---
-title: "Reproducible Research: Peer Assessment 1"
-output: 
+title: 'Reproducible Research: Peer Assessment 1'
+output:
   html_document:
-    keep_md: true
+    keep_md: yes
+  pdf_document: default
 ---
 
 
@@ -35,6 +36,8 @@ summary(activity.total.byDay$steps)
 ##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
 ##      41    8841   10765   10766   13294   21194
 ```
+The Mean Steps is 10766
+The Mediam Steps is 10765
 
 ## What is the average daily activity pattern?
 
@@ -123,7 +126,16 @@ mean((activity.imputed.total.byDay$steps)) - mean((activity.total.byDay$steps))
 ```
 ## [1] 0
 ```
+Original
+The Mean Steps is 10766
+The Mediam Steps is 10765
+
+Imputed
+The Mean Steps is 10766
+The Mediam Steps is 11015
+
 There is no difference in the Means between the Original and Imputed dataset
+The Mean is a little higher on the Imputed dataset
 
 ```r
 # Difference between the Original and Imputed Totals of the days
@@ -133,7 +145,7 @@ sum((activity.imputed.total.byDay$steps)) - sum((activity.total.byDay$steps))
 ```
 ## [1] 86129.51
 ```
-There is a differece in Total steps between the Original and Imputed dataset
+There is an increase of 86,129,51 in Total steps in the Imputed over the Originalß dataset
 
 ## Are there differences in activity patterns between weekdays and weekends?
 
